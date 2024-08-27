@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-Mamma60_GuestForm-807C18BF-F93E-480E-9317-11AC772DEDDB</UserSecretsId>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <AllowUntrustedCertificate>true</AllowUntrustedCertificate>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="images_final_clipped\**" />
+    <Compile Remove="NewFolder\**" />
+    <Compile Remove="UserInfo\**" />
+    <Content Remove="images_final_clipped\**" />
+    <Content Remove="NewFolder\**" />
+    <Content Remove="UserInfo\**" />
+    <EmbeddedResource Remove="images_final_clipped\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <EmbeddedResource Remove="UserInfo\**" />
+    <None Remove="images_final_clipped\**" />
+    <None Remove="NewFolder\**" />
+    <None Remove="UserInfo\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Clipper" Version="6.4.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.6" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="Svg" Version="3.2.3" />
+    <PackageReference Include="System.Drawing.Common" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="FinalData\Final_Images_Clipped\" />
+    <Folder Include="FinalData\Final_UserInfo\" />
+    <Folder Include="FinalData\Final_Images_Nobg\" />
+    <Folder Include="images\" />
+    <Folder Include="images_clipped\" />
+    <Folder Include="images_final\" />
+    <Folder Include="images_nobg\" />
+  </ItemGroup>
+
+</Project>
